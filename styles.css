@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8; /* Normal background color */
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden; /* Prevents scrollbars from appearing */
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Allows for absolute positioning of buttons */
+    z-index: 1; /* Ensures the container is above the background */
+    animation: fadeIn 1s; /* Fade-in animation for the container */
+}
+
+h1 {
+    color: #e63946;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Transition for background color and transform */
+}
+
+.yes {
+    background-color: #2a9d8f;
+    color: white;
+}
+
+.no {
+    background-color: #e76f51;
+    color: white;
+    position: relative; /* Allows for movement */
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Heart GIF Background */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('heart.gif'); /* Replace with your heart GIF path */
+    background-size: cover; /* Ensures the GIF covers the entire background */
+    background-repeat: no-repeat; /* Prevents the GIF from repeating */
+    opacity: 0.2
